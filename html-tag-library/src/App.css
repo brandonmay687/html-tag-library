@@ -1,38 +1,756 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (max-width: 640px) {
+	/* Header */
+	.header {
+		height: 30vh;
+		text-align: center;
+		background-color: #fff;
+		background-image: linear-gradient(#fff, #c1c1c1);
+		border-bottom: solid 5px #b3b3b3;
+	}
+
+	.wrap {
+		padding-top: 0.5em;
+	}
+
+	/* NavBar */
+	.navBar {
+		display: inline-flex;
+		margin-top: 0.5em;
+	}
+
+	button {
+		width: 11em;
+		margin: 0.5em 5px 0;
+		padding: 0.5em;
+		border-radius: 3px 20px 3px;
+	}
+
+	button:hover {
+		color: white;
+		background-color: #999;
+	}
+
+	.link {
+		color: black;
+		text-decoration: none;
+	}
+
+	/* Body */
+	.body {
+		height: 66vh;
+		margin-top: 0.5em;
+		position: absolute;
+		text-align: center;
+	}
+
+	.main {
+		padding-top: 5em;
+	}
+
+	/* Landing page */
+	.landing {
+		width: 100vw;
+		height: 66vh;
+		position: absolute;
+		text-align: center;
+	}
+
+	.landing h1 {
+		position: absolute;
+		justify-items: center;
+		width: 20vw;
+		margin: 30vh 45vw;
+	}
+
+	.morning {
+		position: relative;
+		top: -0.5em;
+		height: 66vh;
+		width: 100vw;
+		background-image: url('./Images/morning.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.noon {
+		position: relative;
+		margin-top: -0.5em;
+		margin-right: -2em;
+		height: 66vh;
+		width: 100vw;
+		background-image: url('./Images/noon.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.evening {
+		color: white;
+		position: relative;
+		top: -0.5em;
+		height: 66vh;
+		width: 100vw;
+		background-image: url('./Images/night.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	/* Full List */
+	.fullList {
+		margin: 0 15vw;
+		padding-top: 3em;
+		padding-bottom: 6em;
+		height: 71vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+		overflow: scroll;
+	}
+
+	/* Basic */
+	.basic {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Formatting */
+	.formatting {
+		margin: 0 15vw;
+		padding-top: 3em;
+		padding-bottom: 6em;
+		height: 71vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+		overflow: scroll;
+	}
+
+	/* Forms And Inputs */
+	.formsAndInputs {
+		margin: 0 15vw;
+		padding-top: 10em;
+		height: 59vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Frames */
+	.frames {
+		margin: 0 15vw;
+		padding-top: 20em;
+		height: 45vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Images */
+	.images {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Audio/Video */
+	.audioVideo {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Links */
+	.links {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Lists */
+	.lists {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Tables */
+	.tables {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Styles And Semantics */
+	.stylesAndSemantics {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Programming */
+	.programming {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Meta */
+	.meta {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Footer */
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		justify-items: center;
+		bottom: 0;
+		height: 4vh;
+		line-height: 4vh;
+		width: 100vw;
+		background-color: #fff;
+		background-image: linear-gradient(#c1c1c1, #fff);
+		border-top: solid 5px #b3b3b3;
+	}
+
+	.container {
+		margin-bottom: 1.5em;
+	}
+
+	.footer h4 {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.footer img {
+		padding-top: 1em;
+		margin-top: 0.5em;
+	}
+
+	.red {
+		color: red;
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media only screen and (min-width: 641) {
+	/* Header */
+	.header {
+		height: 20vh;
+		text-align: center;
+		background-color: #fff;
+		background-image: linear-gradient(#fff, #c1c1c1);
+		border-bottom: solid 5px #b3b3b3;
+	}
+
+	.wrap {
+		padding-top: 0.5em;
+	}
+
+	/* NavBar */
+	.navBar {
+		display: inline-flex;
+		margin-top: 0.5em;
+	}
+
+	button {
+		width: 11em;
+		margin: 0.5em 5px 0;
+		padding: 0.5em;
+		border-radius: 3px 20px 3px;
+	}
+
+	button:hover {
+		color: white;
+		background-color: #999;
+	}
+
+	.link {
+		color: black;
+		text-decoration: none;
+	}
+
+	/* Body */
+	.body {
+		height: 75vh;
+		margin-top: 0.5em;
+		position: absolute;
+		text-align: center;
+	}
+
+	.main {
+		padding-top: 5em;
+	}
+
+	/* Landing page */
+	.landing {
+		width: 100vw;
+		height: 75vh;
+		position: absolute;
+		text-align: center;
+	}
+
+	.landing h1 {
+		position: absolute;
+		justify-items: center;
+		width: 20vw;
+		margin: 30vh 45vw;
+	}
+
+	.morning {
+		position: relative;
+		top: -0.5em;
+		height: 75vh;
+		width: 100vw;
+		background-image: url('./Images/morning.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.noon {
+		position: relative;
+		margin-top: -0.5em;
+		margin-right: -2em;
+		height: 75vh;
+		width: 100vw;
+		background-image: url('./Images/noon.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.evening {
+		color: white;
+		position: relative;
+		top: -0.5em;
+		height: 75vh;
+		width: 100vw;
+		background-image: url('./Images/night.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	/* Full List */
+	.fullList {
+		margin: 0 15vw;
+		padding-top: 3em;
+		padding-bottom: 6em;
+		height: 71vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+		overflow: scroll;
+	}
+
+	/* Basic */
+	.basic {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Formatting */
+	.formatting {
+		margin: 0 15vw;
+		padding-top: 3em;
+		padding-bottom: 6em;
+		height: 71vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+		overflow: scroll;
+	}
+
+	/* Forms And Inputs */
+	.formsAndInputs {
+		margin: 0 15vw;
+		padding-top: 10em;
+		height: 59vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Frames */
+	.frames {
+		margin: 0 15vw;
+		padding-top: 20em;
+		height: 45vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Images */
+	.images {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Audio/Video */
+	.audioVideo {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Links */
+	.links {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Lists */
+	.lists {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Tables */
+	.tables {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Styles And Semantics */
+	.stylesAndSemantics {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Programming */
+	.programming {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Meta */
+	.meta {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Footer */
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		justify-items: center;
+		bottom: 0;
+		height: 5vh;
+		line-height: 5vh;
+		width: 100vw;
+		background-color: #fff;
+		background-image: linear-gradient(#c1c1c1, #fff);
+		border-top: solid 5px #b3b3b3;
+	}
+
+	.footer h4 {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.footer img {
+		padding-top: 1em;
+		margin-top: 0.5em;
+	}
+
+	.red {
+		color: red;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media only screen and (min-width: 1008px) {
+	/* Header */
+	.header {
+		height: 15vh;
+		text-align: center;
+		background-color: #fff;
+		background-image: linear-gradient(#fff, #c1c1c1);
+		border-bottom: solid 5px #b3b3b3;
+	}
 
-.App-link {
-  color: #61dafb;
-}
+	.wrap {
+		padding-top: 3em;
+	}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	/* NavBar */
+	.navBar {
+		display: inline-flex;
+	}
+
+	button {
+		width: 11em;
+		margin: 2em 5px 5em;
+		padding: 0.5em;
+		border-radius: 3px 20px 3px;
+	}
+
+	button:hover {
+		cursor: pointer;
+		color: white;
+		background-color: #999;
+	}
+
+	.link {
+		color: black;
+		text-decoration: none;
+	}
+
+	.link:hover {
+		cursor: pointer;
+	}
+
+	/* Body */
+	.body {
+		height: 55vh;
+		margin-top: 0.5em;
+		position: absolute;
+		text-align: center;
+	}
+
+	.main {
+		padding-top: 5em;
+	}
+
+	/* Landing page */
+	.landing {
+		width: 100vw;
+		height: 80vh;
+		position: absolute;
+		text-align: center;
+	}
+
+	.landing h1 {
+		position: absolute;
+		justify-items: center;
+		width: 20vw;
+		margin: 30vh 45vw;
+	}
+
+	.morning {
+		position: relative;
+		top: -0.5em;
+		height: 80vh;
+		width: 100vw;
+		background-image: url('./Images/morning.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.noon {
+		position: relative;
+		margin-top: -0.5em;
+		margin-right: -2em;
+		height: 80vh;
+		width: 100vw;
+		background-image: url('./Images/noon.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.evening {
+		color: white;
+		position: relative;
+		top: -0.5em;
+		height: 80vh;
+		width: 100vw;
+		background-image: url('./Images/night.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	/* Full List */
+	.fullList {
+		margin: 0 15vw;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		height: 71vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+		overflow: scroll;
+	}
+
+	/* Basic */
+	.basic {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Formatting */
+	.formatting {
+		margin: 0 15vw;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		height: 71vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+		overflow: scroll;
+	}
+
+	/* Forms And Inputs */
+	.formsAndInputs {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Frames */
+	.frames {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Images */
+	.images {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Audio/Video */
+	.audioVideo {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Links */
+	.links {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Lists */
+	.lists {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Tables */
+	.tables {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Styles And Semantics */
+	.stylesAndSemantics {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Programming */
+	.programming {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Meta */
+	.meta {
+		margin: 0 15vw;
+		padding-top: 15em;
+		height: 60vh;
+		width: 70vw;
+		background: rgb(237, 237, 237, 0.6);
+	}
+
+	/* Footer */
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		justify-items: center;
+		bottom: 0;
+		height: 5vh;
+		line-height: 5vh;
+		width: 100vw;
+		background-color: #fff;
+		background-image: linear-gradient(#c1c1c1, #fff);
+		border-top: solid 5px #b3b3b3;
+	}
+
+	.footer h4 {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.footer img {
+		padding-top: 1em;
+		margin-top: 0.5em;
+	}
+
+	.red {
+		color: red;
+	}
 }
